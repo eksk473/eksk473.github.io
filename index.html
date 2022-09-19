@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doyoung's porfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+      }
+      h1 {
+        padding-top: 2rem;
+      }
+      div {
+        padding: 2rem 0;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      li {
+        padding: 0 1rem 1rem 1rem;
+      }
+      .port {
+        font-size: 1.7rem;
+        font-weight: bold;
+        padding-bottom: 3rem;
+        flex: 100%;
+      }
+      .port_ari {
+        flex: 50%;
+      }
+      .port_ant {
+        flex: 50%;
+      }
+      a {
+        text-decoration: none;
+      }
+      a img {
+        width: 100%;
+      }
+      a:hover img {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YOON DOYOUNG</h1>
+    <div class="info">
+      <p>안녕하세요. 프론트 개발자 윤도영입니다.</p>
+    </div>
+    <div class="work">
+      <ul>
+        <li class="port">porfolio</li>
+        <li class="port_ari">
+          <p>아리따움 홈페이지</p>
+          <a href="https://eksk473.github.io/aritaum/index.html" target="_blank"
+            ><img src="./src/aritaum.PNG" alt=""
+          /></a>
+        </li>
+        <li class="port_ant">
+          <p>안테나 홈페이지</p>
+          <a href="https://eksk473.github.io/antenna/index.html" target="_blank"
+            ><img src="./src/antenna.PNG" alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
