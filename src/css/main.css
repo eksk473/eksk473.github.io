@@ -1,0 +1,111 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+p {
+  word-break: keep-all;
+}
+.container {
+  padding: 0 4rem;
+}
+div {
+  padding: 2rem 0;
+}
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.title_sub {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* info / skill / work 공통 */
+.info ul,
+.work ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.info ul li,
+.work ul li {
+  flex: 32%;
+}
+
+/* info */
+.info ul li {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+.info ul li p:first-child {
+  font-size: 1.2rem;
+}
+
+/* skill */
+.skill ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.skill ul li {
+  text-align: center;
+}
+
+/* work */
+.title_sub + p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.work ul {
+  align-items: center;
+}
+
+.work ul li {
+  height: 80px;
+  border: 1px solid #000;
+  margin: 5px;
+}
+.work ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work ul li a:hover {
+  background-color: aliceblue;
+}
+.work ul li p {
+  text-align: center;
+}
+
+/* mobile */
+@media screen and (max-width: 1024px) {
+  .info ul li,
+  .work ul li {
+    flex: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .skill ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .skill ul li {
+    flex: 100%;
+  }
+}

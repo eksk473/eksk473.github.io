@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+div {
+  margin-bottom: 2rem;
+}
+.project {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.tit {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #0000000f;
+}
+.tit + p {
+  padding-left: 20px;
+}
