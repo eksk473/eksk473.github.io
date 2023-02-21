@@ -20,7 +20,11 @@ div {
 .tit + p {
   padding-left: 20px;
 }
+.img {
+  display: flex;
+}
 img {
-  width: 100%;
+  width: calC(50% - 10px);
+  padding: 0 5px;
   margin-bottom: 10px;
 }

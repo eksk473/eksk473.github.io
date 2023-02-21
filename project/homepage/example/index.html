@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="키워드">
+	<meta name="description" content="설명"/>
+	<title></title>
+	<link rel="icon" href=""/>
+    <link href="common/css/fonts.css" type="text/css" rel="stylesheet">
+    <link href="common/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="common/css/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<script type="text/javascript" src="common/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="common/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="common/js/main.js"></script>
+
+<script>
+    $(function() {
+        var type = navigator.appName;
+        var lang;
+
+        if (type === 'Netscape') {
+            lang = navigator.language;
+        } else {
+            lang = navigator.userLanguage;
+        }
+        lang = lang.substr(0, 2);
+
+        if(lang === 'ko') {
+            location.href = './kor/index.html';
+        } else {
+            location.href = './en/index.html';
+        }
+    });
+</script>
+</body>
+</html>
+

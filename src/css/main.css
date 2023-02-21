@@ -4,14 +4,12 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 a {
   display: block;
   color: #000;
   text-decoration: none;
-}
-p {
-  word-break: keep-all;
 }
 .container {
   padding: 0 4rem;
