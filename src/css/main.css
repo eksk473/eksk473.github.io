@@ -14,9 +14,10 @@
 }
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../img/bg_7.jpg");
+    url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: bottom;
 }
 a {
   display: block;
@@ -48,7 +49,7 @@ div {
 }
 .info ul li,
 .work ul li {
-  flex: 32%;
+  flex: 31%;
 }
 
 /* info */
@@ -145,9 +146,18 @@ div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .skill ul li {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.skill ul li img {
+  width: 120px;
+  margin-bottom: 10px;
 }
 
 /* work */
@@ -162,7 +172,7 @@ div {
 .work ul li {
   height: 80px;
   border: 1px solid #fff;
-  margin: 10px 5px;
+  margin: 10px;
 }
 .work ul li a {
   width: 100%;
@@ -184,12 +194,22 @@ div {
 
 /* mobile */
 @media screen and (max-width: 1024px) {
-  .info ul li,
-  .work ul li {
+  .info ul li {
     flex: 100%;
+  }
+  .skill ul li {
+    flex: 33%;
+  }
+  .work ul li {
+    flex: 48%;
+    margin: 10px 5px;
   }
 }
 @media screen and (max-width: 800px) {
+  .container {
+    padding: 0 3rem;
+  }
+
   .skill ul {
     display: flex;
     flex-direction: row;
@@ -197,6 +217,9 @@ div {
     justify-content: space-around;
   }
   .skill ul li {
+    flex: 50%;
+  }
+  .work ul li {
     flex: 100%;
   }
 }
@@ -204,7 +227,7 @@ div {
 /* pc - hover */
 @media (hover: hover) {
   .work ul li a:hover {
-    background-color: aliceblue;
+    background-color: #fff;
   }
   .work ul li a:hover p {
     color: #5a5a5a;
