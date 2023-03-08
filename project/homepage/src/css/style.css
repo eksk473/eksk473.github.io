@@ -4,6 +4,7 @@ body {
   width: 70%;
   margin: 0 auto;
   padding-top: 30px;
+  word-break: keep-all;
 }
 a {
   color: #5a5adc;
