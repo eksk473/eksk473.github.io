@@ -23,9 +23,12 @@ div {
 }
 .img {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 img {
-  width: calC(50% - 10px);
+  width: calC(100% - 10px);
   padding: 0 5px;
   margin-bottom: 10px;
+  flex: 100%;
 }
