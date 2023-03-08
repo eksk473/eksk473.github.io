@@ -60,6 +60,7 @@ div {
 .info ul li p:first-child {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* info - animation */
