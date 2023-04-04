@@ -60,12 +60,16 @@ h1 {
   height: 100%;
   position: absolute;
   top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 .preview img {
   width: 100%;
-  height: 100%;
+  /* height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center; */
 }
 .delBtn {
   position: absolute;
