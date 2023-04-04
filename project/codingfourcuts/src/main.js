@@ -1,4 +1,3 @@
-//인앱 탈출
 window.onload = function () {
   if (
     navigator.userAgent.match(
@@ -10,7 +9,6 @@ window.onload = function () {
       "intent://" +
       location.href.replace(/https?:\/\//i, "") +
       "#Intent;scheme=http;package=com.android.chrome;end";
-    alert(location.href);
   }
   //   if (navigator.userAgent.match(/iPhone|iPad/i)) {
   //     location.href =
