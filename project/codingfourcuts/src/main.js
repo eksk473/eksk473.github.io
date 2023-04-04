@@ -95,12 +95,12 @@ function makeDivToImageFile() {
 
       useCORS: true,
 
-      /* 아래 3 속성이 canvas의 크기를 정해준다. */
+      /* canvas의 크기 지정. */
       width: captureDiv.offsetWidth,
 
       height: captureDiv.offsetHeight,
 
-      scale: 2,
+      scale: 3,
     })
       .then(function (canvas) {
         const imageURL = canvas.toDataURL("image/jpeg");
