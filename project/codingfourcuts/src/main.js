@@ -10,6 +10,7 @@ window.onload = function () {
       "intent://" +
       location.href.replace(/https?:\/\//i, "") +
       "#Intent;scheme=http;package=com.android.chrome;end";
+    alert(location.href);
   }
   //   if (navigator.userAgent.match(/iPhone|iPad/i)) {
   //     location.href =
