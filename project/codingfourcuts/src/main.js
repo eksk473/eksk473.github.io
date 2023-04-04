@@ -86,6 +86,7 @@ function saveAs(url, fileName) {
   document.body.removeChild(link);
 }
 
+//frame 스크린샷
 function makeDivToImageFile() {
   const captureDiv = document.getElementById("frame");
 
@@ -115,8 +116,12 @@ function makeDivToImageFile() {
   }
 }
 
-//download 버튼 눌렀을때
+//download - func 실행
 $(".download").click(function () {
   // 버튼 등을 이용해서 적당한 때 함수를 호출한다.
   makeDivToImageFile();
 });
+
+//인앱 브라우저 -> 외부 브라우저 호출
+window.location.href =
+  "intent://https://eksk473.github.io/project/codingfourcuts/index.html#Intent;scheme=http;package=com.android.chrome;end";
