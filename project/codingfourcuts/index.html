@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>나만의 인생네컷 만들기</h1>
+    <section id="custom">
+      <div class="custom_bg">
+        <span>배경색: </span>
+        <input id="BGcolor" type="color" />
+        <button onclick="BGcolorChange();">변경</button>
+      </div>
+      <!-- <div class="custom_txt">
+        <div class="txt_color">
+          <span>글씨색: </span>
+          <input id="TXTcolor" type="color" />
+          <button onclick="TXTcolorChange();">변경</button>
+        </div>
+        <div class="txt_form">
+          <span>위(최대 4글자)</span>
+          <input type="text" name="" id="" />
+          <br />
+          <span>아래</span>
+          <input type="text" name="" id="" />
+        </div>
+      </div> -->
+
+      <!-- 다운로드 사이즈 721 2192 -->
+      <button class="download">다운로드</button>
+      <div class="info">
+        <p>한컷 사이즈 270*180</p>
+        <p>*사진을 다시 누르면 삭제됩니다*</p>
+      </div>
+    </section>
+    <section id="frame">
+      <div class="filebox">
+        <div class="inputFile">
+          <label for="AddImg1" class="addImgBtn">+</label>
+          <input
+            type="file"
+            id="AddImg1"
+            class="upload-img"
+            accept=".jpg, .png, .gif"
+          />
+        </div>
+      </div>
+      <div class="filebox">
+        <div class="inputFile">
+          <label for="AddImg2" class="addImgBtn">+</label>
+          <input
+            type="file"
+            id="AddImg2"
+            class="upload-img"
+            accept=".jpg, .png, .gif"
+          />
+        </div>
+      </div>
+      <div class="filebox">
+        <div class="inputFile">
+          <label for="AddImg3" class="addImgBtn">+</label>
+          <input
+            type="file"
+            id="AddImg3"
+            class="upload-img"
+            accept=".jpg, .png, .gif"
+          />
+        </div>
+      </div>
+      <div class="filebox">
+        <div class="inputFile">
+          <label for="AddImg4" class="addImgBtn">+</label>
+          <input
+            type="file"
+            id="AddImg4"
+            class="upload-img"
+            accept=".jpg, .png, .gif"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./src/html2canvas.min.js"></script>
+  <script src="./src/main.js"></script>
+</html>
