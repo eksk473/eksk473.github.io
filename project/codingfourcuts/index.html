@@ -10,30 +10,43 @@
   <body>
     <h1>나만의 인생네컷 만들기</h1>
     <section id="custom">
-      <div class="custom_bg">
+      <div class="custom_bg mb_10">
         <span>배경색: </span>
         <input id="BGcolor" type="color" />
         <button onclick="BGcolorChange();">변경</button>
       </div>
-      <!-- <div class="custom_txt">
-        <div class="txt_color">
+      <div class="custom_txt">
+        <div class="txt_color mb_10">
           <span>글씨색: </span>
           <input id="TXTcolor" type="color" />
           <button onclick="TXTcolorChange();">변경</button>
         </div>
-        <div class="txt_form">
-          <span>위(최대 4글자)</span>
-          <input type="text" name="" id="" />
+        <div class="txt_form mb_10">
+          <span>위(최대 4자): </span>
+          <input
+            type="text"
+            id="txt_1st"
+            maxlength="4"
+            onchange="printTxt(this)"
+            placeholder="OO네컷"
+          />
           <br />
-          <span>아래</span>
-          <input type="text" name="" id="" />
+          <span>아래(최대 25자): </span>
+          <input
+            type="text"
+            id="txt_2nd"
+            maxlength="25"
+            onchange="printTxt(this)"
+            placeholder="날짜나 문장 입력해주세요"
+          />
         </div>
-      </div> -->
+      </div>
 
       <!-- 다운로드 사이즈 721 2192 -->
-      <button class="download">다운로드</button>
+      <button class="download mb_10">네컷 다운로드</button>
       <div class="info">
         <p>한컷 사이즈 270*180</p>
+        <p>(세로가 긴 사진은 가운데 정렬되어 보여집니다)</p>
         <p>*사진을 다시 누르면 삭제됩니다*</p>
       </div>
     </section>
@@ -82,14 +95,14 @@
           />
         </div>
       </div>
+      <div class="txtbox">
+        <p class="txt_1st">코딩네컷</p>
+        <p class="txt_2nd"></p>
+      </div>
     </section>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="./src/html2canvas.min.js"></script>
   <script src="./src/main.js"></script>
 </html>

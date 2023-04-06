@@ -18,6 +18,41 @@
 //   // }
 // };
 
+window.onload = function () {
+  getToday();
+};
+
+// 현재 날짜 가져오기
+function getToday() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = ("0" + (1 + date.getMonth())).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
+  $(".txt_2nd").text(year + ". " + month + ". " + day);
+}
+
+//download - makeDivToImageFile() 실행
+$(".download").click(function () {
+  makeDivToImageFile();
+});
+
+// frame 배경색 변경
+function BGcolorChange() {
+  document.getElementById("frame").style.backgroundColor =
+    document.getElementById("BGcolor").value;
+}
+
+// frame 글씨색 변경
+function TXTcolorChange() {
+  $(".txt_1st").css("color", $("#TXTcolor").val());
+  $(".txt_2nd").css("color", $("#TXTcolor").val());
+}
+
+// frame 글씨 등록
+function printTxt(e) {
+  document.getElementsByClassName(e.id)[0].innerText = e.value;
+}
+
 //img 등록
 $(".upload-img").change(function (e) {
   var cuts = e.target.parentElement.parentElement;
@@ -72,23 +107,13 @@ $(".upload-img").change(function (e) {
       }
     });
   }
+  $(".preview img").draggable();
 });
 
 //img 삭제
 function delImg(e) {
-  $(e).parent("div").remove();
+  $(e).parent(".preview").remove();
   $(".upload-img").val("");
-}
-
-// frame 배경색 변경
-function BGcolorChange() {
-  document.getElementById("frame").style.backgroundColor =
-    document.getElementById("BGcolor").value;
-}
-
-// frame 글씨색 변경
-function TXTcolorChange() {
-  $(".txt").css("background-color", $("#TXTcolor").val());
 }
 
 //frame 다운로드
@@ -135,9 +160,3 @@ function makeDivToImageFile() {
     alert("사진을 모두 등록해주세요^^");
   }
 }
-
-//download - func 실행
-$(".download").click(function () {
-  // 버튼 등을 이용해서 적당한 때 함수를 호출한다.
-  makeDivToImageFile();
-});

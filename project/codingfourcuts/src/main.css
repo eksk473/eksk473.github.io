@@ -1,5 +1,10 @@
 @charset "UTF-8";
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap");
+
 * {
+  font-family: "Noto Sans KR", "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -13,21 +18,28 @@ body {
 h1 {
   margin-bottom: 30px;
 }
-.info {
-  color: #b7b7b7;
+.mb_10 {
+  margin-bottom: 10px;
 }
-#BGcolor {
+.info {
+  margin-bottom: 10px;
+  color: #b7b7b7;
+  font-size: 0.7rem;
+}
+#BGcolor,
+#TXTcolor {
   border: none;
   background-color: transparent;
   appearance: none;
 }
-#BGcolor::-webkit-color-swatch {
+#BGcolor::-webkit-color-swatch,
+#TXTcolor::-webkit-color-swatch {
   border-radius: 3px;
 }
 #frame {
   width: 300px;
   margin: 0 auto;
-  padding: 9px 15px 100px 15px;
+  padding: 9px 15px 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +93,21 @@ h1 {
   display: inline-block;
   cursor: pointer;
 }
-
+.txtbox {
+  color: #fff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.txt_1st {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.txt_2nd {
+  font-size: 0.5rem;
+}
 /* media query */
 /* pc, tablet */
 @media screen and (min-width: 400px) {
