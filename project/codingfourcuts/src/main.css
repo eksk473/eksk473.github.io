@@ -14,12 +14,23 @@
 }
 body {
   padding: 20px 10px;
+  /* background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("./bg.jpg"); */
+}
+.mb_10 {
+  margin-bottom: 10px;
 }
 h1 {
   margin-bottom: 30px;
 }
-.mb_10 {
-  margin-bottom: 10px;
+button {
+  padding: 0 5px;
+}
+.custom_color button {
+  margin-right: 10px;
 }
 .info {
   margin-bottom: 10px;
@@ -31,10 +42,16 @@ h1 {
   border: none;
   background-color: transparent;
   appearance: none;
+  width: 30px;
+  height: 30px;
+  padding: 5px 0;
 }
 #BGcolor::-webkit-color-swatch,
 #TXTcolor::-webkit-color-swatch {
   border-radius: 3px;
+}
+.caution {
+  color: red;
 }
 #frame {
   width: 300px;

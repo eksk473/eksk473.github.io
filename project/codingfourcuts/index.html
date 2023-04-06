@@ -10,17 +10,16 @@
   <body>
     <h1>나만의 인생네컷 만들기</h1>
     <section id="custom">
-      <div class="custom_bg mb_10">
+      <div class="custom_color mb_10">
         <span>배경색: </span>
-        <input id="BGcolor" type="color" />
+        <input id="BGcolor" type="color" value="#ffc0cb" />
         <button onclick="BGcolorChange();">변경</button>
+
+        <span>글씨색: </span>
+        <input id="TXTcolor" type="color" value="#ffffff" />
+        <button onclick="TXTcolorChange();">변경</button>
       </div>
       <div class="custom_txt">
-        <div class="txt_color mb_10">
-          <span>글씨색: </span>
-          <input id="TXTcolor" type="color" />
-          <button onclick="TXTcolorChange();">변경</button>
-        </div>
         <div class="txt_form mb_10">
           <span>위(최대 4자): </span>
           <input
@@ -45,7 +44,9 @@
       <!-- 다운로드 사이즈 721 2192 -->
       <button class="download mb_10">네컷 다운로드</button>
       <div class="info">
-        <p>한컷 사이즈 270*180</p>
+        <p class="caution">
+          아이폰인 경우에는 인앱 다운로드 문제로 사파리나 크롬으로 열어주세요!
+        </p>
         <p>(세로가 긴 사진은 가운데 정렬되어 보여집니다)</p>
         <p>*사진을 다시 누르면 삭제됩니다*</p>
       </div>
