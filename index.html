@@ -90,6 +90,15 @@
     <title>Doyoung's porfolio</title>
   </head>
   <body>
+    <div class="popup">
+      <button class="close">x</button>
+      <p>나만의 인생네컷을 만들어 보세요!</p>
+      <a
+        href="https://eksk473.github.io/project/codingfourcuts/index.html"
+        target="_blank"
+        >이동하기</a
+      >
+    </div>
     <div class="info">
       <div class="container">
         <h1>YOON DOYOUNG</h1>
@@ -214,4 +223,16 @@
       </div>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(".popup").draggable({
+      containment: "body",
+      scroll: false,
+    });
+    document.getElementsByClassName("close")[0].onclick = popupClose;
+    function popupClose() {
+      document.getElementsByClassName("popup")[0].style.display = "none";
+    }
+  </script>
 </html>
