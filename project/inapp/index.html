@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인앱탈출</title>
+  </head>
+  <body>
+    <p id="txt">연습중!</p>
+    <script>
+      window.onload = function () {
+        if (
+          navigator.userAgent.match(
+            /inapp|NAVER|KAKAOTALK|Snapchat|Line|WirtschaftsWoche|Thunderbird|Instagram|everytimeApp|WhatsApp|Electron|wadiz|AliApp|zumapp|iPhone(.*)Whale|Android(.*)Whale|kakaostory|band|twitter|DaumApps|DaumDevice\/mobile|FB_IAB|FB4A|FBAN|FBIOS|FBSS|SamsungBrowser\/[^1]/i
+          )
+        ) {
+          document.getElementById("txt").innerText = navigator.userAgent;
+          //   document.body.innerHTML = "";
+          //   if (navigator.userAgent.match(/iPhone|iPad/i)) {
+          // location.href =
+          //   "ftp://도메인/bridge.html?_targeturl=" + location.href;
+          //   } else {
+          // location.href =
+          //   "intent://" +
+          //   location.href.replace(/https?:\/\//i, "") +
+          //   "#Intent;scheme=http;package=com.android.chrome;end";
+          //   alert();
+          //   }
+        }
+      };
+    </script>
+  </body>
+</html>
