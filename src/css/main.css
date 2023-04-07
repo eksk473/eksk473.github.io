@@ -36,6 +36,7 @@ a {
   right: 10px;
   border-radius: 5px;
   cursor: move;
+  z-index: 1;
 }
 .popup .close {
   color: #000;
