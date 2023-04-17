@@ -22,48 +22,73 @@ window.onload = function () {
   getToday();
 };
 
-// 현재 날짜 가져오기
+// 변수
+const titTxt = document.getElementsByClassName("txt_1st");
+const dayTxt = document.getElementsByClassName("txt_2nd");
+
+//----- 현재 날짜 가져오기
 function getToday() {
   const date = new Date();
   const year = date.getFullYear();
   const month = ("0" + (1 + date.getMonth())).slice(-2);
   const day = ("0" + date.getDate()).slice(-2);
-  $(".txt_2nd").text(year + ". " + month + ". " + day);
+
+  for (var i = 0; i < dayTxt.length; i++) {
+    dayTxt[i].innerText = year + ". " + month + ". " + day;
+  }
 }
 
-//download - makeDivToImageFile() 실행
-$(".download").click(function () {
-  makeDivToImageFile();
+// frame 선택
+$("input[name='frameSel']:radio").change(function () {
+  let frameRadio = $(this).val();
+  if (frameRadio == 1) {
+    $("#frame #frame2").css("display", "none");
+    $("#frame #frame1").css("display", "flex");
+    $(".upload_img").val("");
+    $(".preview").remove();
+  } else if (frameRadio == 2) {
+    $("#frame #frame2").css("display", "flex");
+    $("#frame #frame1").css("display", "none");
+    $(".upload_img").val("");
+    $(".preview").remove();
+  }
 });
 
-// frame 배경색 변경
+//----- download - makeDivToImageFile() 실행
+document.getElementsByClassName("download")[0].onclick = makeDivToImageFile;
+
+//----- frame 배경색 변경
 function BGcolorChange() {
-  document.getElementById("frame").style.backgroundColor =
+  document.getElementById("frame1").style.backgroundColor =
+    document.getElementById("BGcolor").value;
+  document.getElementById("frame2").style.backgroundColor =
     document.getElementById("BGcolor").value;
 }
 
-// frame 글씨색 변경
+//----- frame 글씨색 변경
 function TXTcolorChange() {
-  $(".txt_1st").css("color", $("#TXTcolor").val());
-  $(".txt_2nd").css("color", $("#TXTcolor").val());
+  for (var i = 0; i < dayTxt.length; i++) {
+    dayTxt[i].style.color = document.getElementById("TXTcolor").value;
+    titTxt[i].style.color = document.getElementById("TXTcolor").value;
+  }
 }
 
-// frame 글씨 등록
+//----- frame 글씨 등록
 function printTxt(e) {
-  document.getElementsByClassName(e.id)[0].innerText = e.value;
+  for (var i = 0; i < dayTxt.length; i++) {
+    document.getElementsByClassName(e.id)[i].innerText = e.value;
+  }
 }
 
-//img 등록
-$(".upload-img").change(function (e) {
+//----- img 등록 (참고 : https://on-slow.tistory.com/27)
+$(".upload_img").change(function (e) {
   var cuts = e.target.parentElement.parentElement;
   var files = e.target.files;
   var arr = Array.prototype.slice.call(files);
 
   //업로드 가능 파일인지 체크
-  for (var i = 0; i < files.length; i++) {
-    if (!checkExtension(files[i].name, files[i].size)) {
-      return false;
-    }
+  if (!checkExtension(files.name, files.size)) {
+    return false;
   }
   preview(arr);
 
@@ -73,13 +98,13 @@ $(".upload-img").change(function (e) {
 
     if (fileSize >= maxSize) {
       alert("이미지 크기가 초과되었습니다.");
-      $(".upload-img").val(""); //파일 초기화
+      e.value = "";
       return false;
     }
 
     if (regex.test(fileName)) {
       alert("확장자명을 확인해주세요.");
-      $(".upload-img").val(""); //파일 초기화
+      e.value = "";
       return false;
     }
     return true;
@@ -107,16 +132,15 @@ $(".upload-img").change(function (e) {
       }
     });
   }
-  $(".preview img").draggable();
 });
 
-//img 삭제
+//----- img 삭제
 function delImg(e) {
-  $(e).parent(".preview").remove();
-  $(".upload-img").val("");
+  e.parentElement.previousElementSibling.lastElementChild.value = "";
+  e.parentElement.remove();
 }
 
-//frame 다운로드
+//----- frame 다운로드
 function saveAs(url, fileName) {
   const link = document.createElement("a");
 
@@ -131,7 +155,7 @@ function saveAs(url, fileName) {
   document.body.removeChild(link);
 }
 
-//frame 스크린샷
+//----- frame 스크린샷 (참고 : https://thinkforthink.tistory.com/80)
 function makeDivToImageFile() {
   const captureDiv = document.getElementById("frame");
 

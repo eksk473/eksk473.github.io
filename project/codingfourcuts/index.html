@@ -10,6 +10,13 @@
   <body>
     <h1>나만의 인생네컷 만들기</h1>
     <section id="custom">
+      <div class="custom_frame">
+        <span>프레임 선택:</span>
+        <input type="radio" name="frameSel" id="column" value="1" checked />
+        <label for="column">frame1</label>
+        <input type="radio" name="frameSel" id="row" value="2" />
+        <label for="row">frame2</label>
+      </div>
       <div class="custom_color mb_10">
         <span>배경색: </span>
         <input id="BGcolor" type="color" value="#ffc0cb" />
@@ -52,55 +59,109 @@
       </div>
     </section>
     <section id="frame">
-      <div class="filebox">
-        <div class="inputFile">
-          <label for="AddImg1" class="addImgBtn">+</label>
-          <input
-            type="file"
-            id="AddImg1"
-            class="upload-img"
-            accept=".jpg, .png, .gif"
-          />
+      <div id="frame1">
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg1" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg1"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
+        </div>
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg2" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg2"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
+        </div>
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg3" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg3"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
+        </div>
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg4" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg4"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
+        </div>
+        <div class="txtbox">
+          <p class="txt_1st">코딩네컷</p>
+          <p class="txt_2nd"></p>
         </div>
       </div>
-      <div class="filebox">
-        <div class="inputFile">
-          <label for="AddImg2" class="addImgBtn">+</label>
-          <input
-            type="file"
-            id="AddImg2"
-            class="upload-img"
-            accept=".jpg, .png, .gif"
-          />
+      <div id="frame2">
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg5" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg5"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
         </div>
-      </div>
-      <div class="filebox">
-        <div class="inputFile">
-          <label for="AddImg3" class="addImgBtn">+</label>
-          <input
-            type="file"
-            id="AddImg3"
-            class="upload-img"
-            accept=".jpg, .png, .gif"
-          />
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg6" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg6"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
         </div>
-      </div>
-      <div class="filebox">
-        <div class="inputFile">
-          <label for="AddImg4" class="addImgBtn">+</label>
-          <input
-            type="file"
-            id="AddImg4"
-            class="upload-img"
-            accept=".jpg, .png, .gif"
-          />
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg7" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg7"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
         </div>
-      </div>
-      <div class="txtbox">
-        <p class="txt_1st">코딩네컷</p>
-        <p class="txt_2nd"></p>
+        <div class="filebox">
+          <div class="inputFile">
+            <label for="AddImg8" class="addImgBtn">+</label>
+            <input
+              type="file"
+              id="AddImg8"
+              class="upload_img"
+              accept=".jpg, .png, .gif"
+            />
+          </div>
+        </div>
+        <div class="txtbox">
+          <p class="txt_1st">코딩네컷</p>
+          <p class="txt_2nd"></p>
+        </div>
       </div>
     </section>
+    <!-- <section id="frame1"></section>
+    <section id="frame2"></section> -->
   </body>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

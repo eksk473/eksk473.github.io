@@ -54,25 +54,31 @@ button {
 .caution {
   color: red;
 }
+
 #frame {
-  width: 300px;
+  width: fit-content;
   margin: 0 auto;
+}
+
+/* #frame1 */
+#frame1 {
+  width: 300px;
   padding: 9px 15px 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: pink;
 }
-.filebox {
+#frame1 .filebox {
   width: 100%;
   height: 180px;
   position: relative;
   margin-bottom: 15px;
 }
-.upload-img {
+.upload_img {
   display: none;
 }
-.addImgBtn {
+#frame1 .addImgBtn {
   text-align: center;
   display: block;
   width: 100%;
@@ -83,6 +89,58 @@ button {
   font-size: 35px;
   padding: 0;
   cursor: pointer;
+}
+#frame1 .txtbox {
+  color: #fff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* #frame2 */
+#frame #frame2 {
+  display: none;
+}
+
+#frame2 {
+  width: 350px;
+  padding: 10px 10px 0 10px;
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#frame2 .filebox {
+  width: calc(50% - 5px);
+  height: 200px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.upload_img {
+  display: none;
+}
+#frame2 .addImgBtn {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 200px;
+  line-height: 181px;
+  background-color: #fff;
+  color: #b7b7b7;
+  font-size: 35px;
+  padding: 0;
+  cursor: pointer;
+}
+#frame2 .txtbox {
+  color: #fff;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: auto;
 }
 
 .preview {
@@ -111,13 +169,7 @@ button {
   display: inline-block;
   cursor: pointer;
 }
-.txtbox {
-  color: #fff;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
+
 .txt_1st {
   font-size: 1.7rem;
   font-weight: bold;
