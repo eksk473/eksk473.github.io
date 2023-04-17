@@ -105,7 +105,7 @@ button {
 
 #frame2 {
   width: 350px;
-  padding: 10px 10px 0 10px;
+  padding: 10px 15px 0 15px;
   background-color: pink;
   display: flex;
   flex-direction: row;
@@ -136,7 +136,7 @@ button {
 }
 #frame2 .txtbox {
   color: #fff;
-  height: 70px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
