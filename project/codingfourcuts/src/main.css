@@ -67,7 +67,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: pink;
+  /* background-color: pink; */
+  background-image: url("../src/img_2.jpg");
+  background-position: -299px -522px;
+  background-size: 100%;
 }
 #frame1 .filebox {
   width: 100%;
