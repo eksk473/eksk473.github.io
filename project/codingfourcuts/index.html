@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,48 +8,46 @@
     <title>codingfourcuts</title>
   </head>
   <body>
-    <h1>나만의 인생네컷 만들기</h1>
+    <h1>Life-four-cuts Frame</h1>
     <section id="custom">
       <div class="custom_frame">
-        <span>프레임 선택:</span>
+        <span>frame:</span>
         <input type="radio" name="frameSel" id="column" value="1" checked />
         <label for="column">frame1</label>
         <input type="radio" name="frameSel" id="row" value="2" />
         <label for="row">frame2</label>
       </div>
-      <div class="custom_color mb_10">
-        <span>배경색: </span>
+      <div class="custom_color">
+        <span>background: </span>
         <input id="BGcolor" type="color" value="#ffc0cb" />
         <button onclick="BGcolorChange();">변경</button>
 
-        <span>글씨색: </span>
+        <span>text: </span>
         <input id="TXTcolor" type="color" value="#ffffff" />
         <button onclick="TXTcolorChange();">변경</button>
       </div>
       <div class="custom_txt">
-        <div class="txt_form mb_10">
-          <span>위(최대 4자): </span>
-          <input type="text" id="txt_1st" maxlength="4" onchange="printTxt(this)" placeholder="OO네컷" />
-          <br />
-          <span>아래(최대 25자): </span>
-          <input
-            type="text"
-            id="txt_2nd"
-            maxlength="25"
-            onchange="printTxt(this)"
-            placeholder="날짜나 문장 입력해주세요"
-          />
-        </div>
+        <span>1st text(max 4): </span>
+        <input type="text" id="txt_1st" maxlength="4" onchange="printTxt(this)" placeholder="OO네컷" />
+      </div>
+      <div class="custom_txt mb_10">
+        <span>2nd text(max 25): </span>
+        <input
+          type="text"
+          id="txt_2nd"
+          maxlength="25"
+          onchange="printTxt(this)"
+          placeholder="날짜나 문장을 입력해주세요" />
       </div>
 
       <!-- 다운로드 사이즈 721 2192 -->
-      <button class="download mb_10">네컷 다운로드</button>
-      <div class="info">
-        <p class="caution">아이폰인 경우에는 인앱 다운로드 문제로 사파리나 크롬으로 열어주세요!</p>
-        <p>(세로가 긴 사진은 가운데 정렬되어 보여집니다)</p>
-        <p>*사진을 다시 누르면 삭제됩니다*</p>
-      </div>
+      <button class="download">Download</button>
     </section>
+    <div class="info">
+      <p class="caution">아이폰인 경우에는 인앱 다운로드 문제로 사파리 또는 크롬으로 열어주세요!</p>
+      <p>(세로가 긴 사진은 가운데 정렬되어 보여집니다)</p>
+      <p>*사진을 다시 누르면 삭제됩니다*</p>
+    </div>
     <section id="frame">
       <div id="frame1">
         <div class="filebox">
